@@ -1,1 +1,1 @@
-{ "type": "Feature", "properties": {"id":123} "geometry": { "type": "Point", "coordinates": [100.0, 0.0] } }
+{ "type": "Feature", "properties": {"id":123}, "geometry": { "type": "Point", "coordinates": [100.0, 0.0] } }

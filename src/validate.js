@@ -203,7 +203,11 @@ validate.place = function(obj) {
  * Note that only point, polygon, and multipolygon are allowed
  */
 validate.geojson = function(obj) {
-  throw new Error("Not implemented");
+
+  geoAssert(obj);
+
+  if(obj.type !== 'Point' && obj.type !== 'Polygon' && obj.type !== 'MultiPolygon') throw new Error('only Point, Polygon, and MultiPolygon are allowed');
+
 }
 
 /**
