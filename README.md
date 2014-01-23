@@ -16,10 +16,10 @@ try {
 
 ## place(obj)
 
-## place.name(obj)
+## placeName(obj)
 
-## place.geojson(obj)
+## placeGeoJSON(obj)
 
-## place.source(obj)
+## placeSource(str)
 
 ## geojson(obj)

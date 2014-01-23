@@ -1,4 +1,5 @@
-var validate = require(__dirname + '/../src/validate.js'),
+var path = require('path'),
+    validate = require(path.join(__dirname,'..','src/validate.js')),
     assert = require('assert');
 
 describe('date', function(){
@@ -19,7 +20,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('bogus');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
 
@@ -27,7 +28,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('0000-01-01');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
 
@@ -35,7 +36,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('1000-001-01');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
 
@@ -43,7 +44,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('1000-1-01');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
 
@@ -51,7 +52,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('1000-01-001');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
 
@@ -59,7 +60,7 @@ describe('date', function(){
     assert.throws(function(){
       validate.date('1000-01-1');
     },function(error) {
-      return error.message == 'Date must have a format of (-)YYYY-MM-DD';
+      return error.message == 'must have a format of (-)YYYY-MM-DD';
     });
   });
   
