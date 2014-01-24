@@ -2,6 +2,7 @@
 Open Place Database place and geojson validation library.
 
 [![dependencies](https://david-dm.org/openplacedatabase/validate.png)](https://david-dm.org/openplacedatabase/validate)
+[![NPM version](https://badge.fury.io/js/opd-validate.png)](http://badge.fury.io/js/opd-validate)
 
 ## Install
 ````
