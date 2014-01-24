@@ -8,7 +8,12 @@ Open Place Database place and geojson validation library.
 npm install opd-validate --save
 ````
 
-## Examples
+## Run Tests
+````
+npm run test
+````
+
+## Example
 ````javascript
 var validate = require('opd-validate');
 
