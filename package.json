@@ -9,9 +9,9 @@
   },
   "main": "src/validate.js",
   "dependencies": {
-    "validator": "~3.2.0",
-    "underscore": "~1.5.2",
-    "geojson-assert": "0.0.2"
+    "validator": "3.2.0",
+    "underscore": "1.5.2",
+    "geojsonhint": "0.2.2"
   },
   "devDependencies": {
     "mocha": "1.17.0"

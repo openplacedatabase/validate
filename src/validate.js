@@ -1,5 +1,5 @@
 var _ = require('underscore')._,
-    geoAssert = require('geojson-assert'),
+    hint = require('geojsonhint').hint,
     validator = require('validator');
 
 var validate = {};
@@ -204,7 +204,10 @@ validate.place = function(obj) {
  */
 validate.geojson = function(obj) {
 
-  geoAssert(obj);
+  var response = hint(JSON.stringify(obj));
+  if (response.length > 0) {
+        throw new Error(response[0].message);
+    }
 
   if(obj.type !== 'Point' && obj.type !== 'Polygon' && obj.type !== 'MultiPolygon') throw new Error('only Point, Polygon, and MultiPolygon are allowed');
 

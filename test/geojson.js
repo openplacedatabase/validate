@@ -12,7 +12,7 @@ describe('GeoJSON', function(){
           geojson = JSON.parse(geojsonStr);
       validate.geojson(geojson);
     },function(error) {
-      return error.message == 'GeoJSON Error: The type property is required and was not found at line 1';
+      return error.message == 'The type property is required and was not found';
     });
   });
 
@@ -30,7 +30,7 @@ describe('GeoJSON', function(){
           geojson = JSON.parse(geojsonStr);
       validate.geojson(geojson);
     },function(error) {
-      return error.message == 'GeoJSON Error: position must have 2 or more elements at line 1';
+      return error.message == 'position must have 2 or more elements';
     });
   });
 
@@ -56,7 +56,7 @@ describe('GeoJSON', function(){
           geojson = JSON.parse(geojsonStr);
       validate.geojson(geojson);
     },function(error) {
-      return error.message == 'Some GeoJSON assert error';
+      return error.message == 'a LinearRing of coordinates needs to have four or more positions';
     });
   });
 
